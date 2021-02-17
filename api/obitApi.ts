@@ -233,7 +233,7 @@ export class ObitApi {
      * @param serialNumber Serial Number (Required)
      */
     public async generateObitDef (manufacturer: string, partNumber: string, serialNumber: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ObitDefinitionResponse;  }> {
-        const localVarPath = this.basePath + '/api/obit/generate';
+        const localVarPath = this.basePath + '/api/obit/definition';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
