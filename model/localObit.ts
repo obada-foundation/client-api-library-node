@@ -33,9 +33,9 @@ export class LocalObit {
     */
     'partNumber': string;
     /**
-    * Serial number hashed with sha256 hash function
+    * Serial Number
     */
-    'serialNumberHash': string;
+    'serialNumber': string;
     /**
     * Get description from Rohi
     */
@@ -74,8 +74,8 @@ export class LocalObit {
             "type": "string"
         },
         {
-            "name": "serialNumberHash",
-            "baseName": "serial_number_hash",
+            "name": "serialNumber",
+            "baseName": "serial_number",
             "type": "string"
         },
         {
