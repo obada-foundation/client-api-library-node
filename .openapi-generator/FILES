@@ -16,3 +16,4 @@ model/models.ts
 model/obitDefinition.ts
 model/obitDefinitionResponse.ts
 model/obitDid.ts
+model/rootHashResponse.ts

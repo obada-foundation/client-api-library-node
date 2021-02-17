@@ -12,6 +12,7 @@ export * from './localObitStructuredData';
 export * from './obitDefinition';
 export * from './obitDefinitionResponse';
 export * from './obitDid';
+export * from './rootHashResponse';
 
 import * as fs from 'fs';
 
@@ -38,6 +39,7 @@ import { LocalObitStructuredData } from './localObitStructuredData';
 import { ObitDefinition } from './obitDefinition';
 import { ObitDefinitionResponse } from './obitDefinitionResponse';
 import { ObitDid } from './obitDid';
+import { RootHashResponse } from './rootHashResponse';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -69,6 +71,7 @@ let typeMap: {[index: string]: any} = {
     "ObitDefinition": ObitDefinition,
     "ObitDefinitionResponse": ObitDefinitionResponse,
     "ObitDid": ObitDid,
+    "RootHashResponse": RootHashResponse,
 }
 
 export class ObjectSerializer {
