@@ -97,7 +97,7 @@ export class ObitApi {
      * @param obitDid 
      */
     public async downloadObitFromChain (obitDid?: ObitDid, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ClientObitResponse;  }> {
-        const localVarPath = this.basePath + '/server/obit/download';
+        const localVarPath = this.basePath + '/api/server/obit/download';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
@@ -161,7 +161,7 @@ export class ObitApi {
      * @param obitDid Required.
      */
     public async fetchObitFromChain (obitDid: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BlockChainObitResponse;  }> {
-        const localVarPath = this.basePath + '/server/obit/{obit_did}'
+        const localVarPath = this.basePath + '/api/server/obit/{obit_did}'
             .replace('{' + 'obit_did' + '}', encodeURIComponent(String(obitDid)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -232,7 +232,7 @@ export class ObitApi {
      * @param serialNumber Serial Number (Required)
      */
     public async generateObitDef (manufacturer: string, partNumber: string, serialNumber: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ObitDefinitionResponse;  }> {
-        const localVarPath = this.basePath + '/obit/generate';
+        const localVarPath = this.basePath + '/api/obit/generate';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
@@ -322,7 +322,7 @@ export class ObitApi {
      * @param obitDid Required.
      */
     public async getClientObit (obitDid: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ClientObitResponse;  }> {
-        const localVarPath = this.basePath + '/client/obit/{obit_did}'
+        const localVarPath = this.basePath + '/api/client/obit/{obit_did}'
             .replace('{' + 'obit_did' + '}', encodeURIComponent(String(obitDid)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -391,7 +391,7 @@ export class ObitApi {
      * @param localObit 
      */
     public async saveClientObit (localObit?: LocalObit, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ClientObitResponse;  }> {
-        const localVarPath = this.basePath + '/client/obit';
+        const localVarPath = this.basePath + '/api/client/obit';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
@@ -455,7 +455,7 @@ export class ObitApi {
      * @param obitDid 
      */
     public async uploadObit (obitDid?: ObitDid, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BaseResponse;  }> {
-        const localVarPath = this.basePath + '/server/obit/upload';
+        const localVarPath = this.basePath + '/api/server/obit/upload';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
