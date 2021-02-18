@@ -29,15 +29,15 @@ export class ClientObit {
     /**
     * Get description from Rohi
     */
-    'metadata'?: Array<object>;
+    'metadata'?: object;
     /**
     * To generate this link, take an SHA-256 hash of the document, and link to it as https://www.some-website.com?h1=hash-of-document. Note this does not yet adhere to the hashlink standard. 
     */
-    'documents'?: Array<object>;
+    'documents'?: object;
     /**
     * Same as metadata but bigger. Key (string) => Value (string) (hash per line sha256(key + value))
     */
-    'structuredData'?: Array<object>;
+    'structuredData'?: object;
 
     static discriminator: string | undefined = undefined;
 
@@ -95,17 +95,17 @@ export class ClientObit {
         {
             "name": "metadata",
             "baseName": "metadata",
-            "type": "Array<object>"
+            "type": "object"
         },
         {
             "name": "documents",
             "baseName": "documents",
-            "type": "Array<object>"
+            "type": "object"
         },
         {
             "name": "structuredData",
             "baseName": "structured_data",
-            "type": "Array<object>"
+            "type": "object"
         }    ];
 
     static getAttributeTypeMap() {
