@@ -11,9 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { LocalObitDocuments } from './localObitDocuments';
-import { LocalObitMetadata } from './localObitMetadata';
-import { LocalObitStructuredData } from './localObitStructuredData';
 
 export class ClientObit {
     'id'?: number;
@@ -32,15 +29,15 @@ export class ClientObit {
     /**
     * Get description from Rohi
     */
-    'metadata'?: Array<LocalObitMetadata>;
+    'metadata'?: Array<object>;
     /**
     * To generate this link, take an SHA-256 hash of the document, and link to it as https://www.some-website.com?h1=hash-of-document. Note this does not yet adhere to the hashlink standard. 
     */
-    'documents'?: Array<LocalObitDocuments>;
+    'documents'?: Array<object>;
     /**
     * Same as metadata but bigger. Key (string) => Value (string) (hash per line sha256(key + value))
     */
-    'structuredData'?: Array<LocalObitStructuredData>;
+    'structuredData'?: Array<object>;
 
     static discriminator: string | undefined = undefined;
 
@@ -98,17 +95,17 @@ export class ClientObit {
         {
             "name": "metadata",
             "baseName": "metadata",
-            "type": "Array<LocalObitMetadata>"
+            "type": "Array<object>"
         },
         {
             "name": "documents",
             "baseName": "documents",
-            "type": "Array<LocalObitDocuments>"
+            "type": "Array<object>"
         },
         {
             "name": "structuredData",
             "baseName": "structured_data",
-            "type": "Array<LocalObitStructuredData>"
+            "type": "Array<object>"
         }    ];
 
     static getAttributeTypeMap() {
