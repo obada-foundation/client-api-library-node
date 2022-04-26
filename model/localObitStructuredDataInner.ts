@@ -15,7 +15,7 @@ import { RequestFile } from './models';
 /**
 * A record that represent key/value structure data record
 */
-export class LocalObitStructuredData {
+export class LocalObitStructuredDataInner {
     /**
     * Structure data key
     */
@@ -40,7 +40,7 @@ export class LocalObitStructuredData {
         }    ];
 
     static getAttributeTypeMap() {
-        return LocalObitStructuredData.attributeTypeMap;
+        return LocalObitStructuredDataInner.attributeTypeMap;
     }
 }
 

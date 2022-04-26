@@ -6,9 +6,9 @@ export * from './blockChainObitResponse';
 export * from './clientObit';
 export * from './clientObitResponse';
 export * from './localObit';
-export * from './localObitDocuments';
-export * from './localObitMetadata';
-export * from './localObitStructuredData';
+export * from './localObitDocumentsInner';
+export * from './localObitMetadataInner';
+export * from './localObitStructuredDataInner';
 export * from './obitDefinition';
 export * from './obitDefinitionResponse';
 export * from './obitDid';
@@ -33,9 +33,9 @@ import { BlockChainObitResponse } from './blockChainObitResponse';
 import { ClientObit } from './clientObit';
 import { ClientObitResponse } from './clientObitResponse';
 import { LocalObit } from './localObit';
-import { LocalObitDocuments } from './localObitDocuments';
-import { LocalObitMetadata } from './localObitMetadata';
-import { LocalObitStructuredData } from './localObitStructuredData';
+import { LocalObitDocumentsInner } from './localObitDocumentsInner';
+import { LocalObitMetadataInner } from './localObitMetadataInner';
+import { LocalObitStructuredDataInner } from './localObitStructuredDataInner';
 import { ObitDefinition } from './obitDefinition';
 import { ObitDefinitionResponse } from './obitDefinitionResponse';
 import { ObitDid } from './obitDid';
@@ -65,9 +65,9 @@ let typeMap: {[index: string]: any} = {
     "ClientObit": ClientObit,
     "ClientObitResponse": ClientObitResponse,
     "LocalObit": LocalObit,
-    "LocalObitDocuments": LocalObitDocuments,
-    "LocalObitMetadata": LocalObitMetadata,
-    "LocalObitStructuredData": LocalObitStructuredData,
+    "LocalObitDocumentsInner": LocalObitDocumentsInner,
+    "LocalObitMetadataInner": LocalObitMetadataInner,
+    "LocalObitStructuredDataInner": LocalObitStructuredDataInner,
     "ObitDefinition": ObitDefinition,
     "ObitDefinitionResponse": ObitDefinitionResponse,
     "ObitDid": ObitDid,

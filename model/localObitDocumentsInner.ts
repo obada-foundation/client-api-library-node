@@ -15,7 +15,7 @@ import { RequestFile } from './models';
 /**
 * Document hashlink
 */
-export class LocalObitDocuments {
+export class LocalObitDocumentsInner {
     /**
     * Associative name of hashlink
     */
@@ -40,7 +40,7 @@ export class LocalObitDocuments {
         }    ];
 
     static getAttributeTypeMap() {
-        return LocalObitDocuments.attributeTypeMap;
+        return LocalObitDocumentsInner.attributeTypeMap;
     }
 }
 

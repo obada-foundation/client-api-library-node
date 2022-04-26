@@ -15,7 +15,7 @@ import { RequestFile } from './models';
 /**
 * A record that represent key/value metadata record
 */
-export class LocalObitMetadata {
+export class LocalObitMetadataInner {
     /**
     * Metadata key
     */
@@ -40,7 +40,7 @@ export class LocalObitMetadata {
         }    ];
 
     static getAttributeTypeMap() {
-        return LocalObitMetadata.attributeTypeMap;
+        return LocalObitMetadataInner.attributeTypeMap;
     }
 }
 

@@ -9,9 +9,9 @@ model/blockChainObitResponse.ts
 model/clientObit.ts
 model/clientObitResponse.ts
 model/localObit.ts
-model/localObitDocuments.ts
-model/localObitMetadata.ts
-model/localObitStructuredData.ts
+model/localObitDocumentsInner.ts
+model/localObitMetadataInner.ts
+model/localObitStructuredDataInner.ts
 model/models.ts
 model/obitDefinition.ts
 model/obitDefinitionResponse.ts

@@ -11,9 +11,9 @@
  */
 
 import { RequestFile } from './models';
-import { LocalObitDocuments } from './localObitDocuments';
-import { LocalObitMetadata } from './localObitMetadata';
-import { LocalObitStructuredData } from './localObitStructuredData';
+import { LocalObitDocumentsInner } from './localObitDocumentsInner';
+import { LocalObitMetadataInner } from './localObitMetadataInner';
+import { LocalObitStructuredDataInner } from './localObitStructuredDataInner';
 
 export class LocalObit {
     /**
@@ -39,15 +39,15 @@ export class LocalObit {
     /**
     * Get description from Rohi
     */
-    'metadata'?: Array<LocalObitMetadata>;
+    'metadata'?: Array<LocalObitMetadataInner>;
     /**
     * To generate this link, take an SHA-256 hash of the document, and link to it as https://www.some-website.com?h1=hash-of-document. Note this does not yet adhere to the hashlink standard. 
     */
-    'documents'?: Array<LocalObitDocuments>;
+    'documents'?: Array<LocalObitDocumentsInner>;
     /**
     * Same as metadata but bigger. Key (string) => Value (string) (hash per line sha256(key + value))
     */
-    'structuredData'?: Array<LocalObitStructuredData>;
+    'structuredData'?: Array<LocalObitStructuredDataInner>;
     'modifiedAt': Date;
 
     static discriminator: string | undefined = undefined;
@@ -81,17 +81,17 @@ export class LocalObit {
         {
             "name": "metadata",
             "baseName": "metadata",
-            "type": "Array<LocalObitMetadata>"
+            "type": "Array<LocalObitMetadataInner>"
         },
         {
             "name": "documents",
             "baseName": "documents",
-            "type": "Array<LocalObitDocuments>"
+            "type": "Array<LocalObitDocumentsInner>"
         },
         {
             "name": "structuredData",
             "baseName": "structured_data",
-            "type": "Array<LocalObitStructuredData>"
+            "type": "Array<LocalObitStructuredDataInner>"
         },
         {
             "name": "modifiedAt",
