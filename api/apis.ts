@@ -1,5 +1,11 @@
+export * from './accountsApi';
+import { AccountsApi } from './accountsApi';
+export * from './nFTApi';
+import { NFTApi } from './nFTApi';
 export * from './obitApi';
 import { ObitApi } from './obitApi';
+export * from './utilsApi';
+import { UtilsApi } from './utilsApi';
 import * as http from 'http';
 
 export class HttpError extends Error {
@@ -11,4 +17,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [ObitApi];
+export const APIS = [AccountsApi, NFTApi, ObitApi, UtilsApi];

@@ -1,18 +1,29 @@
 import localVarRequest from 'request';
 
-export * from './baseResponse';
-export * from './blockChainObit';
-export * from './blockChainObitResponse';
-export * from './clientObit';
-export * from './clientObitResponse';
-export * from './localObit';
-export * from './localObitDocumentsInner';
-export * from './localObitMetadataInner';
-export * from './localObitStructuredDataInner';
-export * from './obitDefinition';
-export * from './obitDefinitionResponse';
-export * from './obitDid';
-export * from './rootHashResponse';
+export * from './account';
+export * from './accountBalance';
+export * from './deviceDocument';
+export * from './document';
+export * from './generateObitChecksumRequest';
+export * from './generateObitChecksumResponse';
+export * from './generateObitDIDRequest';
+export * from './generateObitDIDResponse';
+export * from './history200Response';
+export * from './internalServerError';
+export * from './nFT';
+export * from './nFTData';
+export * from './nFTDocument';
+export * from './newAccountRequest';
+export * from './notAuthorized';
+export * from './notFound';
+export * from './obit';
+export * from './obitHistory';
+export * from './obits';
+export * from './obitsMeta';
+export * from './saveObitRequest';
+export * from './sendNFTRequest';
+export * from './unprocessableEntity';
+export * from './unprocessableEntityFieldsInner';
 
 import * as fs from 'fs';
 
@@ -27,19 +38,30 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { BaseResponse } from './baseResponse';
-import { BlockChainObit } from './blockChainObit';
-import { BlockChainObitResponse } from './blockChainObitResponse';
-import { ClientObit } from './clientObit';
-import { ClientObitResponse } from './clientObitResponse';
-import { LocalObit } from './localObit';
-import { LocalObitDocumentsInner } from './localObitDocumentsInner';
-import { LocalObitMetadataInner } from './localObitMetadataInner';
-import { LocalObitStructuredDataInner } from './localObitStructuredDataInner';
-import { ObitDefinition } from './obitDefinition';
-import { ObitDefinitionResponse } from './obitDefinitionResponse';
-import { ObitDid } from './obitDid';
-import { RootHashResponse } from './rootHashResponse';
+import { Account } from './account';
+import { AccountBalance } from './accountBalance';
+import { DeviceDocument } from './deviceDocument';
+import { Document } from './document';
+import { GenerateObitChecksumRequest } from './generateObitChecksumRequest';
+import { GenerateObitChecksumResponse } from './generateObitChecksumResponse';
+import { GenerateObitDIDRequest } from './generateObitDIDRequest';
+import { GenerateObitDIDResponse } from './generateObitDIDResponse';
+import { History200Response } from './history200Response';
+import { InternalServerError } from './internalServerError';
+import { NFT } from './nFT';
+import { NFTData } from './nFTData';
+import { NFTDocument } from './nFTDocument';
+import { NewAccountRequest } from './newAccountRequest';
+import { NotAuthorized } from './notAuthorized';
+import { NotFound } from './notFound';
+import { Obit } from './obit';
+import { ObitHistory } from './obitHistory';
+import { Obits } from './obits';
+import { ObitsMeta } from './obitsMeta';
+import { SaveObitRequest } from './saveObitRequest';
+import { SendNFTRequest } from './sendNFTRequest';
+import { UnprocessableEntity } from './unprocessableEntity';
+import { UnprocessableEntityFieldsInner } from './unprocessableEntityFieldsInner';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -54,24 +76,33 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "ClientObit.ObitStatusEnum": ClientObit.ObitStatusEnum,
-        "LocalObit.ObitStatusEnum": LocalObit.ObitStatusEnum,
 }
 
 let typeMap: {[index: string]: any} = {
-    "BaseResponse": BaseResponse,
-    "BlockChainObit": BlockChainObit,
-    "BlockChainObitResponse": BlockChainObitResponse,
-    "ClientObit": ClientObit,
-    "ClientObitResponse": ClientObitResponse,
-    "LocalObit": LocalObit,
-    "LocalObitDocumentsInner": LocalObitDocumentsInner,
-    "LocalObitMetadataInner": LocalObitMetadataInner,
-    "LocalObitStructuredDataInner": LocalObitStructuredDataInner,
-    "ObitDefinition": ObitDefinition,
-    "ObitDefinitionResponse": ObitDefinitionResponse,
-    "ObitDid": ObitDid,
-    "RootHashResponse": RootHashResponse,
+    "Account": Account,
+    "AccountBalance": AccountBalance,
+    "DeviceDocument": DeviceDocument,
+    "Document": Document,
+    "GenerateObitChecksumRequest": GenerateObitChecksumRequest,
+    "GenerateObitChecksumResponse": GenerateObitChecksumResponse,
+    "GenerateObitDIDRequest": GenerateObitDIDRequest,
+    "GenerateObitDIDResponse": GenerateObitDIDResponse,
+    "History200Response": History200Response,
+    "InternalServerError": InternalServerError,
+    "NFT": NFT,
+    "NFTData": NFTData,
+    "NFTDocument": NFTDocument,
+    "NewAccountRequest": NewAccountRequest,
+    "NotAuthorized": NotAuthorized,
+    "NotFound": NotFound,
+    "Obit": Obit,
+    "ObitHistory": ObitHistory,
+    "Obits": Obits,
+    "ObitsMeta": ObitsMeta,
+    "SaveObitRequest": SaveObitRequest,
+    "SendNFTRequest": SendNFTRequest,
+    "UnprocessableEntity": UnprocessableEntity,
+    "UnprocessableEntityFieldsInner": UnprocessableEntityFieldsInner,
 }
 
 export class ObjectSerializer {
