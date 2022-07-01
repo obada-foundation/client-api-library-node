@@ -24,7 +24,7 @@ export class DeviceDocument {
     /**
     * If true then client helper will encrypt document with account key
     */
-    'shouldEncrypt'?: boolean = true;
+    'shouldEncrypt'?: boolean = false;
 
     static discriminator: string | undefined = undefined;
 
