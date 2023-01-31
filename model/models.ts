@@ -2,28 +2,38 @@ import localVarRequest from 'request';
 
 export * from './account';
 export * from './accountBalance';
+export * from './accountRequest';
+export * from './accounts';
 export * from './deviceDocument';
 export * from './document';
+export * from './exportAccountRequest';
+export * from './exportAccountResponse';
 export * from './generateObitChecksumRequest';
 export * from './generateObitChecksumResponse';
 export * from './generateObitDIDRequest';
 export * from './generateObitDIDResponse';
 export * from './history200Response';
+export * from './importAccountRequest';
 export * from './internalServerError';
+export * from './mnemonicRequest';
 export * from './nFT';
 export * from './nFTData';
 export * from './nFTDocument';
-export * from './newAccountRequest';
+export * from './newMnemonic';
 export * from './notAuthorized';
 export * from './notFound';
 export * from './obit';
 export * from './obitHistory';
 export * from './obits';
 export * from './obitsMeta';
+export * from './profile';
+export * from './registerRequest';
 export * from './saveObitRequest';
+export * from './sendCoinsRequest';
 export * from './sendNFTRequest';
 export * from './unprocessableEntity';
 export * from './unprocessableEntityFieldsInner';
+export * from './walletExistsError';
 
 import * as fs from 'fs';
 
@@ -40,28 +50,38 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { Account } from './account';
 import { AccountBalance } from './accountBalance';
+import { AccountRequest } from './accountRequest';
+import { Accounts } from './accounts';
 import { DeviceDocument } from './deviceDocument';
 import { Document } from './document';
+import { ExportAccountRequest } from './exportAccountRequest';
+import { ExportAccountResponse } from './exportAccountResponse';
 import { GenerateObitChecksumRequest } from './generateObitChecksumRequest';
 import { GenerateObitChecksumResponse } from './generateObitChecksumResponse';
 import { GenerateObitDIDRequest } from './generateObitDIDRequest';
 import { GenerateObitDIDResponse } from './generateObitDIDResponse';
 import { History200Response } from './history200Response';
+import { ImportAccountRequest } from './importAccountRequest';
 import { InternalServerError } from './internalServerError';
+import { MnemonicRequest } from './mnemonicRequest';
 import { NFT } from './nFT';
 import { NFTData } from './nFTData';
 import { NFTDocument } from './nFTDocument';
-import { NewAccountRequest } from './newAccountRequest';
+import { NewMnemonic } from './newMnemonic';
 import { NotAuthorized } from './notAuthorized';
 import { NotFound } from './notFound';
 import { Obit } from './obit';
 import { ObitHistory } from './obitHistory';
 import { Obits } from './obits';
 import { ObitsMeta } from './obitsMeta';
+import { Profile } from './profile';
+import { RegisterRequest } from './registerRequest';
 import { SaveObitRequest } from './saveObitRequest';
+import { SendCoinsRequest } from './sendCoinsRequest';
 import { SendNFTRequest } from './sendNFTRequest';
 import { UnprocessableEntity } from './unprocessableEntity';
 import { UnprocessableEntityFieldsInner } from './unprocessableEntityFieldsInner';
+import { WalletExistsError } from './walletExistsError';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -81,28 +101,38 @@ let enumsMap: {[index: string]: any} = {
 let typeMap: {[index: string]: any} = {
     "Account": Account,
     "AccountBalance": AccountBalance,
+    "AccountRequest": AccountRequest,
+    "Accounts": Accounts,
     "DeviceDocument": DeviceDocument,
     "Document": Document,
+    "ExportAccountRequest": ExportAccountRequest,
+    "ExportAccountResponse": ExportAccountResponse,
     "GenerateObitChecksumRequest": GenerateObitChecksumRequest,
     "GenerateObitChecksumResponse": GenerateObitChecksumResponse,
     "GenerateObitDIDRequest": GenerateObitDIDRequest,
     "GenerateObitDIDResponse": GenerateObitDIDResponse,
     "History200Response": History200Response,
+    "ImportAccountRequest": ImportAccountRequest,
     "InternalServerError": InternalServerError,
+    "MnemonicRequest": MnemonicRequest,
     "NFT": NFT,
     "NFTData": NFTData,
     "NFTDocument": NFTDocument,
-    "NewAccountRequest": NewAccountRequest,
+    "NewMnemonic": NewMnemonic,
     "NotAuthorized": NotAuthorized,
     "NotFound": NotFound,
     "Obit": Obit,
     "ObitHistory": ObitHistory,
     "Obits": Obits,
     "ObitsMeta": ObitsMeta,
+    "Profile": Profile,
+    "RegisterRequest": RegisterRequest,
     "SaveObitRequest": SaveObitRequest,
+    "SendCoinsRequest": SendCoinsRequest,
     "SendNFTRequest": SendNFTRequest,
     "UnprocessableEntity": UnprocessableEntity,
     "UnprocessableEntityFieldsInner": UnprocessableEntityFieldsInner,
+    "WalletExistsError": WalletExistsError,
 }
 
 export class ObjectSerializer {

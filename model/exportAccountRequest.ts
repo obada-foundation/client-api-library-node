@@ -13,55 +13,34 @@
 import { RequestFile } from './models';
 
 /**
-* OBADA account
+* OBADA account export payload
 */
-export class Account {
+export class ExportAccountRequest {
     /**
-    * Account address associated name
-    */
-    'name'?: string;
-    /**
-    * Public key
-    */
-    'pubKey'?: string;
-    /**
-    * OBADA address
+    * OBADA account
     */
     'address'?: string;
-    'balance'?: number;
-    'nftCount'?: number;
+    /**
+    * Passphrase to decrypt the account
+    */
+    'passphrase'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "pubKey",
-            "baseName": "pub_key",
-            "type": "string"
-        },
         {
             "name": "address",
             "baseName": "address",
             "type": "string"
         },
         {
-            "name": "balance",
-            "baseName": "balance",
-            "type": "number"
-        },
-        {
-            "name": "nftCount",
-            "baseName": "nft_count",
-            "type": "number"
+            "name": "passphrase",
+            "baseName": "passphrase",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return Account.attributeTypeMap;
+        return ExportAccountRequest.attributeTypeMap;
     }
 }
 

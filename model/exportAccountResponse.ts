@@ -13,25 +13,25 @@
 import { RequestFile } from './models';
 
 /**
-* New account create payload
+* OBADA account export response
 */
-export class NewAccountRequest {
+export class ExportAccountResponse {
     /**
-    * Account owner email, will be used for verification purpose
+    * OBADA account
     */
-    'email': string;
+    'privateKey'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "email",
-            "baseName": "email",
+            "name": "privateKey",
+            "baseName": "private_key",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return NewAccountRequest.attributeTypeMap;
+        return ExportAccountResponse.attributeTypeMap;
     }
 }
 

@@ -13,55 +13,34 @@
 import { RequestFile } from './models';
 
 /**
-* OBADA account
+* Sending tokens payload
 */
-export class Account {
-    /**
-    * Account address associated name
-    */
-    'name'?: string;
-    /**
-    * Public key
-    */
-    'pubKey'?: string;
-    /**
-    * OBADA address
-    */
-    'address'?: string;
-    'balance'?: number;
-    'nftCount'?: number;
+export class SendCoinsRequest {
+    'recepientAddress': string;
+    'amount': string;
+    'denom': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "recepientAddress",
+            "baseName": "recepient_address",
             "type": "string"
         },
         {
-            "name": "pubKey",
-            "baseName": "pub_key",
+            "name": "amount",
+            "baseName": "amount",
             "type": "string"
         },
         {
-            "name": "address",
-            "baseName": "address",
+            "name": "denom",
+            "baseName": "denom",
             "type": "string"
-        },
-        {
-            "name": "balance",
-            "baseName": "balance",
-            "type": "number"
-        },
-        {
-            "name": "nftCount",
-            "baseName": "nft_count",
-            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return Account.attributeTypeMap;
+        return SendCoinsRequest.attributeTypeMap;
     }
 }
 

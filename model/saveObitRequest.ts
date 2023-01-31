@@ -30,6 +30,7 @@ export class SaveObitRequest {
     */
     'serialNumber': string;
     'documents'?: Array<DeviceDocument>;
+    'address'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -53,6 +54,11 @@ export class SaveObitRequest {
             "name": "documents",
             "baseName": "documents",
             "type": "Array<DeviceDocument>"
+        },
+        {
+            "name": "address",
+            "baseName": "address",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
