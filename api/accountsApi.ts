@@ -16,7 +16,6 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { Account } from '../model/account';
-import { AccountBalance } from '../model/accountBalance';
 import { AccountRequest } from '../model/accountRequest';
 import { Accounts } from '../model/accounts';
 import { ExportAccountRequest } from '../model/exportAccountRequest';
@@ -246,10 +245,12 @@ export class AccountsApi {
     }
     /**
      * 
-     * @summary Shows account balance of OBADA address
+     * @summary Delete imported account
+     * @param address OBADA address
      */
-    public async balance (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AccountBalance;  }> {
-        const localVarPath = this.basePath + '/accounts/my-balance';
+    public async deleteImportedAccount (address: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/accounts/{address}'
+            .replace('{' + 'address' + '}', encodeURIComponent(String(address)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];
@@ -261,12 +262,17 @@ export class AccountsApi {
         }
         let localVarFormParams: any = {};
 
+        // verify required parameter 'address' is not null or undefined
+        if (address === null || address === undefined) {
+            throw new Error('Required parameter address was null or undefined when calling deleteImportedAccount.');
+        }
+
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
+            method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
             uri: localVarPath,
@@ -293,13 +299,12 @@ export class AccountsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: AccountBalance;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "AccountBalance");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

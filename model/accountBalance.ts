@@ -12,25 +12,25 @@
 
 import { RequestFile } from './models';
 
-/**
-* OBADA Account balance
-*/
 export class AccountBalance {
-    'address'?: string;
-    'balance'?: number;
+    /**
+    * Denomination unit
+    */
+    'denom'?: string;
+    'amount'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "address",
-            "baseName": "address",
+            "name": "denom",
+            "baseName": "denom",
             "type": "string"
         },
         {
-            "name": "balance",
-            "baseName": "balance",
-            "type": "number"
+            "name": "amount",
+            "baseName": "amount",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

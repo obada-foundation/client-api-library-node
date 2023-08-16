@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { AccountBalance } from './accountBalance';
 
 /**
 * OBADA account
@@ -28,7 +29,7 @@ export class Account {
     * OBADA address
     */
     'address'?: string;
-    'balance'?: number;
+    'balance'?: AccountBalance;
     'nftCount'?: number;
 
     static discriminator: string | undefined = undefined;
@@ -52,7 +53,7 @@ export class Account {
         {
             "name": "balance",
             "baseName": "balance",
-            "type": "number"
+            "type": "AccountBalance"
         },
         {
             "name": "nftCount",
